@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on darwin)" generated="2024-03-17T20:45:02.184848" rpa="false" schemaversion="5">
+<suite id="s1" name="ProductNavigation" source="/Users/azeez/PycharmProjects/AssessmentVelve/Assessment/ProductNavigation.robot">
+<test id="s1-t1" name="Launch Browser Test Cases" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:45:02.269615" level="INFO">Opening browser 'chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>http://automationexercise.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-17T20:45:02.269500" elapsed="67.003512"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-17T20:46:09.274717" elapsed="0.420290"/>
+</kw>
+<kw name="Navigate to Homepage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:46:09.697572" level="INFO">Opening url 'http://automationexercise.com'</msg>
+<arg>http://automationexercise.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-17T20:46:09.697348" elapsed="34.727630"/>
+</kw>
+<status status="PASS" start="2024-03-17T20:46:09.696597" elapsed="34.728641"/>
+</kw>
+<kw name="Navigate to Product Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:46:44.426923" level="INFO">Clicking element 'xpath://a[@href="/products"]'.</msg>
+<arg>xpath://a[@href="/products"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-17T20:46:44.426096" elapsed="34.632069"/>
+</kw>
+<status status="PASS" start="2024-03-17T20:46:44.425688" elapsed="34.632671"/>
+</kw>
+<kw name="Verify Page Contains &quot;All Products&quot;">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:47:19.086430" level="INFO">Element 'xpath://h2[@class="title text-center"]' contains text 'ALL PRODUCTS'.</msg>
+<arg>xpath://h2[@class="title text-center"]</arg>
+<arg>ALL PRODUCTS</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-17T20:47:19.059264" elapsed="0.027256"/>
+</kw>
+<status status="PASS" start="2024-03-17T20:47:19.058814" elapsed="0.027804"/>
+</kw>
+<kw name="Verify Search Bar is Visible">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:47:19.106828" level="INFO">Element '//*[@id="search_product"]' is displayed.</msg>
+<arg>//*[@id="search_product"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-17T20:47:19.087080" elapsed="0.019821"/>
+</kw>
+<status status="PASS" start="2024-03-17T20:47:19.086830" elapsed="0.020153"/>
+</kw>
+<kw name="Input Text Into Search Bar">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:47:19.107496" level="INFO">Typing text 'men tshirt' into text field 'xpath://*[@id="search_product"]'.</msg>
+<arg>xpath://*[@id="search_product"]</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-17T20:47:19.107346" elapsed="0.111566"/>
+</kw>
+<arg>men tshirt</arg>
+<status status="PASS" start="2024-03-17T20:47:19.107145" elapsed="0.111834"/>
+</kw>
+<kw name="Click Search Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:47:19.219311" level="INFO">Clicking button 'xpath://*[@id="submit_search"]'.</msg>
+<arg>xpath://*[@id="submit_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-17T20:47:19.219225" elapsed="2.448065"/>
+</kw>
+<status status="PASS" start="2024-03-17T20:47:19.219097" elapsed="2.448319"/>
+</kw>
+<kw name="Verify Product &quot;Men Tshirt&quot; is Visible" source_name="Verify Product &quot;${product}&quot; is Visible">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:47:21.682759" level="INFO">Current page contains text 'Men Tshirt'.</msg>
+<arg>${product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-03-17T20:47:21.667979" elapsed="0.014872"/>
+</kw>
+<status status="PASS" start="2024-03-17T20:47:21.667673" elapsed="0.015272"/>
+</kw>
+<kw name="Add Men Tshirt Product Details Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-17T20:47:21.683574" level="INFO">Clicking element 'xpath://a[@href="/product_details/2"]'.</msg>
+<msg time="2024-03-17T20:47:23.126913" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-17T20:47:23.127319" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/product_details/2" style="color: brown;"&gt;...&lt;/a&gt; is not clickable at point (586, 661). Other element would receive the click: &lt;iframe id="aswift_6" name="aswift_6" style="width: 641px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="641" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20240313/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=7&amp;amp;uci=a!7&amp;amp;btvi=6" data-google-container-id="a!7" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+0   chromedriver                        0x0000000102ecc524 chromedriver + 3966244
+1   chromedriver                        0x0000000102ec4ab0 chromedriver + 3934896
+2   chromedriver                        0x0000000102b47da0 chromedriver + 277920
+3   chromedriver                        0x0000000102b8fe68 chromedriver + 573032
+4   chromedriver                        0x0000000102b8e3ec chromedriver + 566252
+5   chromedriver                        0x0000000102b8c56c chromedriver + 558444
+6   chromedriver                        0x0000000102b8ba9c chromedriver + 555676
+7   chromedriver                        0x0000000102b80e84 chromedriver + 511620
+8   chromedriver                        0x0000000102b808a8 chromedriver + 510120
+9   chromedriver                        0x0000000102bc2bf0 chromedriver + 781296
+10  chromedriver                        0x0000000102b7efb0 chromedriver + 503728
+11  chromedriver                        0x0000000102b7fa28 chromedriver + 506408
+12  chromedriver                        0x0000000102e9170c chromedriver + 3725068
+13  chromedriver                        0x0000000102e95c00 chromedriver + 3742720
+14  chromedriver                        0x0000000102e7a1f4 chromedriver + 3629556
+15  chromedriver                        0x0000000102e966fc chromedriver + 3745532
+16  chromedriver                        0x0000000102e6d56c chromedriver + 3577196
+17  chromedriver                        0x0000000102eb4f5c chromedriver + 3870556
+18  chromedriver                        0x0000000102eb5100 chromedriver + 3870976
+19  chromedriver                        0x0000000102ec4720 chromedriver + 3933984
+20  libsystem_pthread.dylib             0x000000019c1faf94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019c1f5d34 thread_start + 8
+</msg>
+<arg>xpath://a[@href="/product_details/2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-03-17T20:47:21.683425" elapsed="1.448416">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/product_details/2" style="color: brown;"&gt;...&lt;/a&gt; is not clickable at point (586, 661). Other element would receive the click: &lt;iframe id="aswift_6" name="aswift_6" style="width: 641px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="641" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20240313/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=7&amp;amp;uci=a!7&amp;amp;btvi=6" data-google-container-id="a!7" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+0   chromedriver                        0x0000000102ecc524 chromedriver + 3966244
+1   chromedriver                        0x0000000102ec4ab0 chromedriver + 3934896
+2   chromedriver                        0x0000000102b47da0 chromedriver + 277920
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x0000000102b7fa28 chromedriver + 506408
+12  chromedriver                        0x0000000102e9170c chromedriver + 3725068
+13  chromedriver                        0x0000000102e95c00 chromedriver + 3742720
+14  chromedriver                        0x0000000102e7a1f4 chromedriver + 3629556
+15  chromedriver                        0x0000000102e966fc chromedriver + 3745532
+16  chromedriver                        0x0000000102e6d56c chromedriver + 3577196
+17  chromedriver                        0x0000000102eb4f5c chromedriver + 3870556
+18  chromedriver                        0x0000000102eb5100 chromedriver + 3870976
+19  chromedriver                        0x0000000102ec4720 chromedriver + 3933984
+20  libsystem_pthread.dylib             0x000000019c1faf94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019c1f5d34 thread_start + 8</status>
+</kw>
+<status status="FAIL" start="2024-03-17T20:47:21.683191" elapsed="1.452073">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/product_details/2" style="color: brown;"&gt;...&lt;/a&gt; is not clickable at point (586, 661). Other element would receive the click: &lt;iframe id="aswift_6" name="aswift_6" style="width: 641px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="641" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20240313/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=7&amp;amp;uci=a!7&amp;amp;btvi=6" data-google-container-id="a!7" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+0   chromedriver                        0x0000000102ecc524 chromedriver + 3966244
+1   chromedriver                        0x0000000102ec4ab0 chromedriver + 3934896
+2   chromedriver                        0x0000000102b47da0 chromedriver + 277920
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x0000000102b7fa28 chromedriver + 506408
+12  chromedriver                        0x0000000102e9170c chromedriver + 3725068
+13  chromedriver                        0x0000000102e95c00 chromedriver + 3742720
+14  chromedriver                        0x0000000102e7a1f4 chromedriver + 3629556
+15  chromedriver                        0x0000000102e966fc chromedriver + 3745532
+16  chromedriver                        0x0000000102e6d56c chromedriver + 3577196
+17  chromedriver                        0x0000000102eb4f5c chromedriver + 3870556
+18  chromedriver                        0x0000000102eb5100 chromedriver + 3870976
+19  chromedriver                        0x0000000102ec4720 chromedriver + 3933984
+20  libsystem_pthread.dylib             0x000000019c1faf94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019c1f5d34 thread_start + 8</status>
+</kw>
+<kw name="Add Product to Cart">
+<status status="NOT RUN" start="2024-03-17T20:47:23.135399" elapsed="0.000017"/>
+</kw>
+<kw name="Wait Until Added Modal is Visible">
+<status status="NOT RUN" start="2024-03-17T20:47:23.135476" elapsed="0.000011"/>
+</kw>
+<kw name="Continue Shopping">
+<status status="NOT RUN" start="2024-03-17T20:47:23.135538" elapsed="0.000009"/>
+</kw>
+<kw name="Navigate to Men Category">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136472" elapsed="0.000017"/>
+</kw>
+<kw name="Click on &quot;JEANS&quot;">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136556" elapsed="0.000011"/>
+</kw>
+<kw name="Verify &quot;men Jeans Products&quot; is Visible" source_name="Verify &quot;${category}&quot; is Visible">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136626" elapsed="0.000011"/>
+</kw>
+<kw name="Click on &quot;View Product&quot;">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136682" elapsed="0.000009"/>
+</kw>
+<kw name="Verify Product &quot;Soft Stretch Jeans&quot; is Visible" source_name="Verify Product &quot;${product}&quot; is Visible">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136748" elapsed="0.000010"/>
+</kw>
+<kw name="Add Product to Cart">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136799" elapsed="0.000009"/>
+</kw>
+<kw name="Continue Shopping">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136851" elapsed="0.000009"/>
+</kw>
+<kw name="Navigate to Cart">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136899" elapsed="0.000007"/>
+</kw>
+<kw name="Verify Products are Visible in Cart">
+<status status="NOT RUN" start="2024-03-17T20:47:23.136947" elapsed="0.000008"/>
+</kw>
+<doc>This test case navigates to the homepage, searches for products, adds them to the cart, and verifies them in the cart.</doc>
+<tag>Functional Test</tag>
+<status status="FAIL" start="2024-03-17T20:45:02.268920" elapsed="140.868136">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/product_details/2" style="color: brown;"&gt;...&lt;/a&gt; is not clickable at point (586, 661). Other element would receive the click: &lt;iframe id="aswift_6" name="aswift_6" style="width: 641px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="641" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20240313/r20110914/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=7&amp;amp;uci=a!7&amp;amp;btvi=6" data-google-container-id="a!7" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=122.0.6261.129)
+Stacktrace:
+0   chromedriver                        0x0000000102ecc524 chromedriver + 3966244
+1   chromedriver                        0x0000000102ec4ab0 chromedriver + 3934896
+2   chromedriver                        0x0000000102b47da0 chromedriver + 277920
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x0000000102b7fa28 chromedriver + 506408
+12  chromedriver                        0x0000000102e9170c chromedriver + 3725068
+13  chromedriver                        0x0000000102e95c00 chromedriver + 3742720
+14  chromedriver                        0x0000000102e7a1f4 chromedriver + 3629556
+15  chromedriver                        0x0000000102e966fc chromedriver + 3745532
+16  chromedriver                        0x0000000102e6d56c chromedriver + 3577196
+17  chromedriver                        0x0000000102eb4f5c chromedriver + 3870556
+18  chromedriver                        0x0000000102eb5100 chromedriver + 3870976
+19  chromedriver                        0x0000000102ec4720 chromedriver + 3933984
+20  libsystem_pthread.dylib             0x000000019c1faf94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019c1f5d34 thread_start + 8</status>
+</test>
+<status status="FAIL" start="2024-03-17T20:45:02.185544" elapsed="140.954130"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Functional Test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="ProductNavigation">ProductNavigation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
